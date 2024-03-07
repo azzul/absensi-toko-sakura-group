@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvnmkry"
+                android:layout_height="wrap_content"
+                android:text="Nama :"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="8sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvidkry"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textnama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="5sp"
+                android:text="nama karyawan"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvnmkry"
+                app:layout_constraintBottom_toTopOf="@+id/tvidkry"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/tvidkry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvnmkry"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvtelpkry"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="8sp"
+                android:text="NIK :"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textnik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvnmkry"
+                app:layout_constraintStart_toEndOf="@id/tvidkry"
+                app:layout_constraintBottom_toTopOf="@id/tvtelpkry"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="5sp"
+                android:text="s/d"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvtelpkry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvidkry"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_edit"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="8sp"
+                android:text="Telepon :"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/texttelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvidkry"
+                app:layout_constraintStart_toEndOf="@id/tvtelpkry"
+                app:layout_constraintBottom_toTopOf="@id/btn_edit"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="5sp"
+                android:text="akhir"
+                android:textSize="14sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_delete"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvtelpkry"
+                android:id="@+id/btn_edit"
+                android:layout_marginBottom="8sp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imgEdit"
+                    android:layout_height="25sp"
+                    android:src="@drawable/baseline_mode_edit_24"
+                    app:layout_constraintStart_toStartOf="@id/btn_edit"
+                    app:layout_constraintTop_toTopOf="@id/btn_edit"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_edit"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textFontWeight="200"
+                    android:layout_marginStart="3sp"
+                    app:layout_constraintStart_toEndOf="@id/imgEdit"
+                    app:layout_constraintTop_toTopOf="@id/btn_edit"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_edit"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_delete"
+                app:layout_constraintStart_toEndOf="@id/btn_edit"
+                app:layout_constraintTop_toBottomOf="@id/tvtelpkry"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8sp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imgHapus"
+                    android:layout_height="25sp"
+                    android:src="@drawable/delete"
+                    app:layout_constraintStart_toStartOf="@id/btn_delete"
+                    app:layout_constraintTop_toTopOf="@id/btn_delete"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_delete"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hapus"
+                    android:textStyle="bold"
+                    android:textFontWeight="200"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginStart="3sp"
+                    app:layout_constraintStart_toEndOf="@id/imgHapus"
+                    app:layout_constraintTop_toTopOf="@id/btn_delete"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_delete"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

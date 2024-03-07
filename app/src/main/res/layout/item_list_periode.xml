@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvnmprd"
+                android:layout_height="wrap_content"
+                android:text="Bulan :"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="5sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textmulai"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textperiode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="5sp"
+                android:text="nama periode"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvnmprd"
+                app:layout_constraintBottom_toTopOf="@+id/textmulai"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/tvrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvnmprd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_edit"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="5sp"
+                android:text="Periode :"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textmulai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textperiode"
+                app:layout_constraintStart_toEndOf="@id/tvrange"
+                app:layout_constraintBottom_toTopOf="@id/btn_edit"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="5sp"
+                android:text="Arif Dwi Laksito"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvsd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textperiode"
+                app:layout_constraintStart_toEndOf="@id/textmulai"
+                app:layout_constraintBottom_toTopOf="@id/btn_edit"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="5sp"
+                android:text="s/d"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/textakhir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textperiode"
+                app:layout_constraintStart_toEndOf="@id/tvsd"
+                app:layout_constraintBottom_toTopOf="@id/btn_edit"
+                android:layout_marginBottom="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="5sp"
+                android:text="akhir"
+                android:textSize="14sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_delete"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textmulai"
+                android:id="@+id/btn_edit">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imgEdit"
+                    android:layout_height="25sp"
+                    android:src="@drawable/baseline_mode_edit_24"
+                    app:layout_constraintStart_toStartOf="@id/btn_edit"
+                    app:layout_constraintTop_toTopOf="@id/btn_edit"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_edit"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textFontWeight="200"
+                    android:layout_marginStart="3sp"
+                    app:layout_constraintStart_toEndOf="@id/imgEdit"
+                    app:layout_constraintTop_toTopOf="@id/btn_edit"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_edit"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_delete"
+                app:layout_constraintStart_toEndOf="@id/btn_edit"
+                app:layout_constraintTop_toBottomOf="@id/textmulai"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imgHapus"
+                    android:layout_height="25sp"
+                    android:src="@drawable/delete"
+                    app:layout_constraintStart_toStartOf="@id/btn_delete"
+                    app:layout_constraintTop_toTopOf="@id/btn_delete"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_delete"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hapus"
+                    android:textStyle="bold"
+                    android:textFontWeight="200"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginStart="3sp"
+                    app:layout_constraintStart_toEndOf="@id/imgHapus"
+                    app:layout_constraintTop_toTopOf="@id/btn_delete"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_delete"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+

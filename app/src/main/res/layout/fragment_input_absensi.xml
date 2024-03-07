@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color2">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_layout"
+        android:layout_marginBottom="30sp">
+
+        <TextView
+            android:id="@+id/tvjdlabsen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="INPUT ABSENSI KARYAWAN"
+            android:textAlignment="center"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNIK"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="NIK "
+            android:textStyle="bold"
+            android:textSize="6pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvjdlabsen" />
+
+        <TextView
+            android:id="@+id/smd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvNIK"
+            app:layout_constraintTop_toBottomOf="@id/tvjdlabsen" />
+
+        <TextView
+            android:id="@+id/txtNik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="10sp"
+            android:hint="Karyawan Belum Dipilih"
+            android:layout_marginEnd="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/smd1"
+            app:layout_constraintTop_toBottomOf="@id/tvjdlabsen" />
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="8sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="NAMA"
+            android:textStyle="bold"
+            android:textSize="6pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNIK" />
+
+        <TextView
+            android:id="@+id/smd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvNama"
+            app:layout_constraintTop_toBottomOf="@id/tvNIK" />
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="8sp"
+            android:hint="Karyawan Belum Dipilih"
+            android:layout_marginEnd="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/smd2"
+            app:layout_constraintTop_toBottomOf="@id/tvNIK" />
+
+        <Button
+            android:id="@+id/btn_pilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:layout_marginTop="10sp"
+            android:text="Pilih Karyawan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNama" />
+
+        <TextView
+            android:id="@+id/tvTGL"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Tanggal "
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_pilih" />
+
+        <TextView
+            android:id="@+id/smd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvTGL"
+            app:layout_constraintTop_toBottomOf="@id/btn_pilih" />
+
+        <EditText
+            android:id="@+id/txttglabsen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="15sp"
+            android:hint="Pilih Tanggal"
+            android:textSize="7pt"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/calendar2"
+            app:layout_constraintStart_toEndOf="@id/smd3"
+            app:layout_constraintTop_toBottomOf="@id/btn_pilih" />
+
+        <ImageView
+            android:id="@+id/calendar2"
+            android:layout_width="20dp"
+            android:layout_height="20sp"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="25sp"
+            android:layout_marginBottom="1sp"
+            android:src="@drawable/periode"
+            android:layout_marginEnd="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txttglabsen"
+            app:layout_constraintTop_toBottomOf="@id/btn_pilih" />
+
+        <TextView
+            android:id="@+id/tvSTTS"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Status Absen "
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTGL" />
+
+        <TextView
+            android:id="@+id/smd4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvSTTS"
+            app:layout_constraintTop_toBottomOf="@id/tvTGL" />
+
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="25sp"
+            android:entries="@array/spinner_status_absen"
+            android:padding="2sp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvSTTS"
+            app:layout_constraintTop_toBottomOf="@id/tvTGL" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/spinnerStatus">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@id/frame_input2"
+                app:layout_constraintHorizontal_weight="5"
+                app:layout_constraintStart_toStartOf="@id/frame_utama"
+                app:layout_constraintTop_toTopOf="@id/frame_utama">
+
+                <TextView
+                    android:id="@+id/tvjdl2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="25sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Ketentuan Jam Kerja : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/frame_input" />
+
+                <TextView
+                    android:id="@+id/tvDtgRule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="20sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Datang : "
+                    android:textStyle="bold"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvjdl2" />
+
+                <EditText
+                    android:id="@+id/txtdtgrule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="0sp"
+                    android:hint="Pilih Jam"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDtgRule" />
+
+                <ImageView
+                    android:id="@+id/jam1"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/clock"
+                    app:layout_constraintStart_toEndOf="@id/txtdtgrule"
+                    app:layout_constraintTop_toBottomOf="@id/tvDtgRule" />
+
+                <TextView
+                    android:id="@+id/tvPlgRule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Pulang : "
+                    android:textStyle="bold"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtdtgrule" />
+
+                <EditText
+                    android:id="@+id/txtplgrule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="0sp"
+                    android:hint="Pilih Jam"
+                    android:paddingLeft="10sp"
+                    android:textSize="7pt"
+                    android:paddingRight="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlgRule" />
+
+                <ImageView
+                    android:id="@+id/jam2"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginBottom="1sp"
+                    android:src="@drawable/clock"
+                    app:layout_constraintStart_toEndOf="@id/txtplgrule"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlgRule" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame_input2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/frame_utama"
+                app:layout_constraintHorizontal_weight="5"
+                app:layout_constraintStart_toEndOf="@id/frame_input"
+                app:layout_constraintTop_toTopOf="@id/frame_utama">
+
+                <TextView
+                    android:id="@+id/tvjdl3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="25sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Absensi : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/frame_input2" />
+
+                <TextView
+                    android:id="@+id/tvDtgAct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="20sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Jam Datang : "
+                    android:textStyle="bold"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvjdl3" />
+
+                <EditText
+                    android:id="@+id/txtdtgact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="0sp"
+                    android:hint="Pilih Jam"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="7pt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDtgAct" />
+
+                <ImageView
+                    android:id="@+id/jam3"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginBottom="1sp"
+                    android:src="@drawable/clock"
+                    app:layout_constraintStart_toEndOf="@id/txtdtgact"
+                    app:layout_constraintTop_toBottomOf="@id/tvDtgAct" />
+
+                <TextView
+                    android:id="@+id/tvPlgAct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Jam Pulang : "
+                    android:textSize="7pt"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtdtgact" />
+
+                <EditText
+                    android:id="@+id/txtplgact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="0sp"
+                    android:hint="Pilih Jam"
+                    android:paddingLeft="10sp"
+                    android:textSize="7pt"
+                    android:paddingRight="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlgAct" />
+
+                <ImageView
+                    android:id="@+id/jam4"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginBottom="1sp"
+                    android:src="@drawable/clock"
+                    app:layout_constraintStart_toEndOf="@id/txtplgact"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlgAct" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvlmbr"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Lembur Reguler"
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frame_utama" />
+        <TextView
+            android:id="@+id/smd5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvlmbr"
+            app:layout_constraintTop_toBottomOf="@id/frame_utama" />
+
+        <EditText
+            android:id="@+id/txtlmbr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="18sp"
+            android:hint=" Jumlah jam Lembur"
+            android:textSize="7pt"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintStart_toEndOf="@id/smd5"
+            app:layout_constraintEnd_toStartOf="@id/infolbr"
+            app:layout_constraintTop_toBottomOf="@id/frame_utama" />
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:id="@+id/infolbr"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/info"
+            app:layout_constraintStart_toEndOf="@id/txtlmbr"
+            app:layout_constraintTop_toBottomOf="@id/frame_utama"
+            />
+
+
+        <TextView
+            android:id="@+id/tvlmbrh"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Lembur Holiday"
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbr" />
+
+        <TextView
+            android:id="@+id/smd6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvlmbrh"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbr" />
+
+        <EditText
+            android:id="@+id/txtlmbrh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="18sp"
+            android:hint="Jam Lembur Holiday"
+            android:textSize="7pt"
+            app:layout_constraintEnd_toStartOf="@id/infolbrh"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintStart_toEndOf="@id/smd6"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbr" />
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:id="@+id/infolbrh"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/info"
+            app:layout_constraintStart_toEndOf="@id/txtlmbrh"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbr"
+            />
+        <TextView
+            android:id="@+id/tvizin"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Jumlah Jam Izin"
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbrh" />
+        <TextView
+            android:id="@+id/smd7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toEndOf="@id/tvizin"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbrh" />
+
+        <EditText
+            android:id="@+id/txtizin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="18sp"
+            android:hint=" Jumlah Jam Izin"
+            android:textSize="7pt"
+            app:layout_constraintEnd_toStartOf="@id/infoizin"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintStart_toEndOf="@id/smd7"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbrh" />
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:id="@+id/infoizin"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/info"
+            app:layout_constraintStart_toEndOf="@id/txtizin"
+            app:layout_constraintTop_toBottomOf="@id/tvlmbrh"
+            />
+        <TextView
+            android:id="@+id/tvketabsen"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Keterangan"
+            android:textStyle="bold"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvizin" />
+        <TextView
+            android:id="@+id/smd8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=":"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvketabsen"
+            app:layout_constraintEnd_toStartOf="@id/txtketabsensi"
+            app:layout_constraintTop_toBottomOf="@id/tvizin" />
+
+        <EditText
+            android:id="@+id/txtketabsensi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="18sp"
+            android:hint=" Keterangan"
+            android:textSize="7pt"
+            app:layout_constraintEnd_toStartOf="@id/infoket"
+            app:layout_constraintStart_toEndOf="@id/smd8"
+            app:layout_constraintTop_toBottomOf="@id/tvizin" />
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:id="@+id/infoket"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/info"
+            app:layout_constraintStart_toEndOf="@id/txtketabsensi"
+            app:layout_constraintTop_toBottomOf="@id/tvizin"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:id="@+id/btn_simpanabsensi"
+            android:text="SIMPAN"
+            android:textColorHint="@null"
+            android:paddingLeft="30sp"
+            android:paddingRight="30sp"
+            app:layout_constraintTop_toBottomOf="@id/tvketabsen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginBottom="30sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

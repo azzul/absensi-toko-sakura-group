@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textnama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="4dp"
+                    android:text="nama karyawan"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/frame_utama"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8sp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textnama">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/frame_kiri"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toStartOf="@id/frame_kanan"
+                        app:layout_constraintHorizontal_weight="5"
+                        app:layout_constraintStart_toStartOf="@id/frame_utama"
+                        app:layout_constraintTop_toTopOf="@id/frame_utama"
+                        app:layout_constraintWidth_percent="0.50">
+
+                        <TextView
+                            android:id="@+id/tvprd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Periode :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@id/tvizinrpt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textprd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3sp"
+                            android:layout_marginTop="4sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="periode"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toTopOf="@id/tvizinrpt"
+                            app:layout_constraintStart_toEndOf="@id/tvprd"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvizinrpt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Izin :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvprd" />
+
+                        <TextView
+                            android:id="@+id/textizinrpt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="textizinrpt"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@id/tvizinrpt"
+                            app:layout_constraintTop_toBottomOf="@id/tvprd" />
+
+                        <TextView
+                            android:id="@+id/tvizinkerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Tidak Masuk:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvizinrpt" />
+
+                        <TextView
+                            android:id="@+id/textizinkerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="textizinkerja"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@id/tvizinkerja"
+                            app:layout_constraintTop_toBottomOf="@id/tvizinrpt" />
+
+                        <TextView
+                            android:id="@+id/tvalpha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Alpha :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvizinkerja" />
+
+                        <TextView
+                            android:id="@+id/textalpha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="textalpha"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@id/tvalpha"
+                            app:layout_constraintTop_toBottomOf="@id/tvizinkerja" />
+
+                        <TextView
+                            android:id="@+id/tvsd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Surat Dokter :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvalpha" />
+
+                        <TextView
+                            android:id="@+id/textsd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="textsd"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@id/tvsd"
+                            app:layout_constraintTop_toBottomOf="@id/tvalpha" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/frame_kanan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintHorizontal_weight="5"
+                        app:layout_constraintStart_toEndOf="@id/frame_kiri"
+                        app:layout_constraintTop_toTopOf="@id/frame_utama"
+                        app:layout_constraintWidth_percent="0.50"
+                        android:paddingBottom="15sp">
+
+                        <TextView
+                            android:id="@+id/tvjumkh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Kerja Libur :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/frame_kanan"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumkk" />
+
+                        <TextView
+                            android:id="@+id/textjumkh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="8sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="akhir"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_weight="4"
+                            app:layout_constraintStart_toEndOf="@id/tvjumkh"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumkk" />
+
+                        <TextView
+                            android:id="@+id/tvjumkk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Total Kerja :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@id/tvjumkh"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textjumkk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginEnd="5sp"
+                            android:layout_marginBottom="5sp"
+                            android:scrollHorizontally="false"
+                            android:text="akhir"
+                            android:textSize="13sp"
+                            app:flow_wrapMode="aligned"
+                            app:layout_constraintBottom_toTopOf="@id/tvjumkh"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@id/tvjumkk"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+                        <TextView
+                            android:id="@+id/tvjumlbr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Lembur Biasa :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/frame_kanan"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumkh" />
+
+                        <TextView
+                            android:id="@+id/textjumlbr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="8sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="akhir"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_weight="4"
+                            app:layout_constraintStart_toEndOf="@id/tvjumlbr"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumkh" />
+                        <TextView
+                            android:id="@+id/tvjumlbrh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Lembur Libur :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/frame_kanan"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumlbr" />
+
+                        <TextView
+                            android:id="@+id/textjumlbrh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="8sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="akhir"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_weight="4"
+                            app:layout_constraintStart_toEndOf="@id/tvjumlbrh"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumlbr" />
+                        <TextView
+                            android:id="@+id/tvjumoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="Libur :"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/frame_kanan"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumlbrh" />
+
+                        <TextView
+                            android:id="@+id/textjumoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="8sp"
+                            android:layout_marginBottom="5sp"
+                            android:text="akhir"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_weight="4"
+                            app:layout_constraintStart_toEndOf="@id/tvjumoff"
+                            app:layout_constraintTop_toBottomOf="@id/tvjumlbrh" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
